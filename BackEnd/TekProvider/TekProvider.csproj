@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="FastEndpoints" Version="8.2.0" />
+    <PackageReference Include="FastEndpoints.Swagger" Version="8.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TekProvider.Application\TekProvider.Application.csproj" />
+    <ProjectReference Include="..\TekProvider.Infrastructure\TekProvider.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
