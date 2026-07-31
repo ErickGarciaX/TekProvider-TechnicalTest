@@ -3,4 +3,5 @@
   <Project Path="TekProvider.Domain/TekProvider.Domain.csproj" />
   <Project Path="TekProvider.Infrastructure/TekProvider.Infrastructure.csproj" />
   <Project Path="TekProvider/TekProvider.csproj" />
+  <Project Path="TekProvider.Tests/TekProvider.Tests.csproj" />
 </Solution>
