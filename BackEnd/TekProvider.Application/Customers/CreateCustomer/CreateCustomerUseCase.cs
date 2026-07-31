@@ -23,12 +23,12 @@ public sealed class CreateCustomerUseCase : ICreateCustomerUseCase
 
         if (await _customerRepository.ExistsByTaxIdAsync(command.TaxId, cancellationToken: cancellationToken))
         {
-            throw new DuplicateCustomerException(nameof(Customer.TaxId), command.TaxId);
+            throw new DuplicateCustomerException(nameof(Customer.TaxId));
         }
 
         if (await _customerRepository.ExistsByEmailAsync(command.Email, cancellationToken: cancellationToken))
         {
-            throw new DuplicateCustomerException(nameof(Customer.Email), command.Email);
+            throw new DuplicateCustomerException(nameof(Customer.Email));
         }
 
         var customer = Customer.Create(command.Name, command.TaxId, command.Email, command.Phone);

@@ -95,7 +95,7 @@ public sealed class CustomerRepository : ICustomerRepository
                 _ => "Value"
             };
 
-            throw new DuplicateCustomerException(field, pgEx.Detail ?? string.Empty);
+            throw new DuplicateCustomerException(field);
         }
     }
 }

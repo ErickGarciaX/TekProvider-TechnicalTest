@@ -27,12 +27,12 @@ public sealed class UpdateCustomerUseCase : IUpdateCustomerUseCase
 
         if (await _customerRepository.ExistsByTaxIdAsync(command.TaxId, command.Id, cancellationToken))
         {
-            throw new DuplicateCustomerException(nameof(Customer.TaxId), command.TaxId);
+            throw new DuplicateCustomerException(nameof(Customer.TaxId));
         }
 
         if (await _customerRepository.ExistsByEmailAsync(command.Email, command.Id, cancellationToken))
         {
-            throw new DuplicateCustomerException(nameof(Customer.Email), command.Email);
+            throw new DuplicateCustomerException(nameof(Customer.Email));
         }
 
         customer.Update(command.Name, command.TaxId, command.Email, command.Phone);
