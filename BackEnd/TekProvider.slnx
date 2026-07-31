@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TekProvider.Application/TekProvider.Application.csproj" />
+  <Project Path="TekProvider.Domain/TekProvider.Domain.csproj" />
+  <Project Path="TekProvider.Infrastructure/TekProvider.Infrastructure.csproj" />
+  <Project Path="TekProvider/TekProvider.csproj" />
+</Solution>
